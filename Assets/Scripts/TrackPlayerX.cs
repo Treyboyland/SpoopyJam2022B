@@ -20,7 +20,7 @@ public class TrackPlayerX : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         Vector3 pos = player.transform.position + offset;
         pos.y = fixedY;

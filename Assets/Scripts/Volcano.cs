@@ -18,14 +18,22 @@ public class Volcano : MonoBehaviour
     [SerializeField]
     AnamolySO fill, magma, meteor, all, death;
 
+    [SerializeField]
+    AnimationCurve multiplier;
+
+    [SerializeField]
+    MagmaPool magmaPool;
+
 
     [SerializeField]
     WeightedRandomizerSO weights;
 
 
     float elapsed = 0;
+    float currentMultiplier = 1;
 
     float timeUntilNextAnamoly;
+    bool lastShakeState = false;
 
     // Start is called before the first frame update
     void Start()
@@ -42,8 +50,19 @@ public class Volcano : MonoBehaviour
 
     void IncreaseTime()
     {
-        elapsed += Time.deltaTime;
+        currentMultiplier = multiplier.Evaluate(magmaPool.ActiveCount);
+        elapsed += (Time.deltaTime * currentMultiplier);
         shake.ShouldShake = elapsed / timeUntilNextAnamoly > progressRumble;
+
+        if(lastShakeState != shake.ShouldShake && shake.ShouldShake)
+        {
+            lastShakeState = true;
+            GameManager.Manager.OnShakeSound.Invoke();
+        }
+        else if(lastShakeState != shake.ShouldShake)
+        {
+            lastShakeState = shake.ShouldShake;
+        }
     }
 
     void DoAnamoly()
@@ -82,5 +101,7 @@ public class Volcano : MonoBehaviour
         {
             GameManager.Manager.OnDeathAnamoly.Invoke();
         }
+
+        GameManager.Manager.OnAnamolyChosen.Invoke(chosen);
     }
 }

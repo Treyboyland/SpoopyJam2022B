@@ -9,6 +9,23 @@ public class MonobehaviourPool<T> : MonoBehaviour where T : MonoBehaviour
 
     protected List<T> pool = new List<T>();
 
+    public virtual int ActiveCount
+    {
+        get
+        {
+            int count = 0;
+            foreach (var obj in pool)
+            {
+                if (obj.gameObject.activeInHierarchy)
+                {
+                    count++;
+                }
+            }
+
+            return count;
+        }
+    }
+
     protected T CreateObject()
     {
         var newObj = Instantiate(prefab, transform);
@@ -18,9 +35,9 @@ public class MonobehaviourPool<T> : MonoBehaviour where T : MonoBehaviour
 
     public T GetObject()
     {
-        foreach(var obj in pool)
+        foreach (var obj in pool)
         {
-            if(!obj.gameObject.activeInHierarchy)
+            if (!obj.gameObject.activeInHierarchy)
             {
                 return obj;
             }
@@ -34,5 +51,10 @@ public class MonobehaviourPool<T> : MonoBehaviour where T : MonoBehaviour
         var obj = GetObject();
         obj.transform.position = pos;
         obj.gameObject.SetActive(true);
+    }
+
+    public virtual void SpawnObject()
+    {
+        GetObject().gameObject.SetActive(true);
     }
 }

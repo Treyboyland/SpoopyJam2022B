@@ -18,6 +18,7 @@ public class Magma : MonoBehaviour
         var player = collision.gameObject.GetComponent<Player>();
         if(player != null)
         {
+            GameManager.Manager.OnMagmaPickup.Invoke();
             gameObject.SetActive(false);
         }
     }

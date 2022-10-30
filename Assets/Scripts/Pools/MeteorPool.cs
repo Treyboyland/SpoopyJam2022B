@@ -10,7 +10,7 @@ public class MeteorPool : MonobehaviourPool<Meteor>
     [SerializeField]
     Vector2 xRange;
 
-    public void SpawnObject()
+    public override void SpawnObject()
     {
         Vector2 pos = new Vector2(xRange.Random(), spawnY);
         var meteor = GetObject();

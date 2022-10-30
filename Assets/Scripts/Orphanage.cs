@@ -38,7 +38,7 @@ public class Orphanage : MonoBehaviour
 
     void SetCameras(bool playerActive)
     {
-        playerCamera.gameObject.SetActive(playerActive);
-        orphanCamera.gameObject.SetActive(!playerActive);
+        playerCamera.enabled = playerActive;
+        orphanCamera.enabled = !playerActive;
     }
 }

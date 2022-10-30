@@ -22,7 +22,6 @@ public class ScaleAnimator : MonoBehaviour
         {
             scaleSet = true;
             originalScale = transform.localScale;
-            Debug.LogWarning(originalScale);
         }
         transform.localScale = originalScale;
     }

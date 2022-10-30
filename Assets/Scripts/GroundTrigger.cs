@@ -7,11 +7,22 @@ public class GroundTrigger : MonoBehaviour
     [SerializeField]
     ScaleAnimator animator;
 
+    [SerializeField]
+    GameObject particle;
+
     static int count;
 
     public static int Count { get => count; }
 
     public static bool WithinTrigger { get { return count > 0; } }
+
+    private void OnEnable()
+    {
+        if(gameObject.activeInHierarchy)
+        {
+            particle.SetActive(true);
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

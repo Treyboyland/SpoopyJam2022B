@@ -15,7 +15,7 @@ public class ConstantSpeed : MonoBehaviour
     private void OnEnable()
     {
         multiplier = multiplierRange.Random();
-        Debug.LogWarning(multiplier);
+        //Debug.LogWarning(multiplier);
     }
 
     // Update is called once per frame

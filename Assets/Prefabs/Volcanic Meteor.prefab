@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8781266372052850868}
   - component: {fileID: 8781266372052850874}
   - component: {fileID: 8781266372052850869}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Meteor Surface
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4832,7 +4832,7 @@ GameObject:
   - component: {fileID: 8781266372153675516}
   - component: {fileID: 8781266372153675522}
   - component: {fileID: 8781266372153675517}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Meteor Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9654,7 +9654,7 @@ GameObject:
   - component: {fileID: 8781266372887165348}
   - component: {fileID: 2479150479652173863}
   - component: {fileID: 6077334501732332424}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Volcanic Meteor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9721,7 +9721,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: {x: 0, y: -1}
-  multiplierRange: {x: 2, y: 10}
+  multiplierRange: {x: 2, y: 8}
 --- !u!1 &8781266373360799887
 GameObject:
   m_ObjectHideFlags: 0
@@ -9733,7 +9733,7 @@ GameObject:
   - component: {fileID: 8781266373360799884}
   - component: {fileID: 8781266373360799890}
   - component: {fileID: 8781266373360799885}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Meteor Particle
   m_TagString: Untagged
   m_Icon: {fileID: 0}

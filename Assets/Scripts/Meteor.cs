@@ -7,6 +7,11 @@ public class Meteor : MonoBehaviour
     [SerializeField]
     Vector2Int maxHealthRange;
 
+    [SerializeField]
+    bool instaKill;
+
+    public bool InstaKill { get => instaKill; }
+
     int currentHealth;
 
     private void OnEnable()
@@ -19,8 +24,20 @@ public class Meteor : MonoBehaviour
         currentHealth--;
         if(currentHealth <= 0)
         {
-            GameManager.Manager.OnMeteorDestroy.Invoke(transform.position);
+            if(instaKill)
+            {
+                GameManager.Manager.OnMeteorDestroyLarge.Invoke(transform.position);
+            }
+            else
+            {
+                GameManager.Manager.OnMeteorDestroy.Invoke(transform.position);
+            }
+            GameManager.Manager.OnMeteorDeathSound.Invoke();
             gameObject.SetActive(false);
+        }
+        else
+        {
+            GameManager.Manager.OnHitSound.Invoke();
         }
     }
 }
