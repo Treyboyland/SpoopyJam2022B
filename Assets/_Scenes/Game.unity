@@ -975,11 +975,11 @@ MonoBehaviour:
       time: 7
       value: 1
       inSlope: 0
-      outSlope: 0
-      tangentMode: 0
+      outSlope: 0.07442345
+      tangentMode: 1
       weightedMode: 0
       inWeight: 0.33333334
-      outWeight: 0.33333334
+      outWeight: 0.3411922
     - serializedVersion: 3
       time: 20
       value: 2
@@ -1011,7 +1011,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   magmaPool: {fileID: 907003164}
-  weights: {fileID: 11400000, guid: ed2713151bfaf1649a7f5eccf8bbb219, type: 2}
+  weights: {fileID: 11400000, guid: 0a93c1c365f93634b979a782c5a6d0df, type: 2}
 --- !u!1 &707086656
 GameObject:
   m_ObjectHideFlags: 0
@@ -2259,7 +2259,7 @@ Transform:
   m_GameObject: {fileID: 1312222027}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.33, y: 1.33, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 821665130}
@@ -2497,16 +2497,16 @@ MonoBehaviour:
   gradient:
     serializedVersion: 2
     key0: {r: 0.3739409, g: 0.35686275, b: 1, a: 1}
-    key1: {r: 1, g: 0, b: 0, a: 1}
-    key2: {r: 0.5283019, g: 0.5283019, b: 0.5283019, a: 0}
+    key1: {r: 0.5, g: 0.011792451, b: 0.011792451, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
     key5: {r: 0, g: 0, b: 0, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
     ctime0: 0
-    ctime1: 24094
-    ctime2: 46646
+    ctime1: 45875
+    ctime2: 65535
     ctime3: 65535
     ctime4: 0
     ctime5: 0
@@ -2521,9 +2521,11 @@ MonoBehaviour:
     atime6: 0
     atime7: 0
     m_Mode: 0
-    m_NumColorKeys: 4
+    m_NumColorKeys: 2
     m_NumAlphaKeys: 2
-  skyValue: 0
+  ground: {fileID: 821665132}
+  secondsToAnimate: 2
+  skyValue: 1
 --- !u!1 &1408366466
 GameObject:
   m_ObjectHideFlags: 0

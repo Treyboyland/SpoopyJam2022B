@@ -17,6 +17,7 @@ public class GroundMeteorTrigger : MonoBehaviour
             else
             {
                 GameManager.Manager.OnInstantDie.Invoke();
+                GameManager.Manager.OnGroundHitSound.Invoke();
             }
 
             var pos = meteor.transform.position;
