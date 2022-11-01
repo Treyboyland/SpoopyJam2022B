@@ -26,6 +26,9 @@ public class GameManager : MonoBehaviour
     ParticlePool meteorDeathPoolLarge;
 
     [SerializeField]
+    ParticlePool meteorHitParticlePool;
+
+    [SerializeField]
     GroundPool groundPool;
 
     [SerializeField]
@@ -99,9 +102,13 @@ public class GameManager : MonoBehaviour
 
     public UnityEvent OnInstantDie = new UnityEvent();
 
+    public UnityEvent<Vector3> OnHitParticle = new UnityEvent<Vector3>();
+
     public UnityEvent<float> OnLifeRemaining = new UnityEvent<float>();
 
     public UnityEvent<AnamolySO> OnAnamolyChosen = new UnityEvent<AnamolySO>();
+
+    public UnityEvent OnGroundSpawned = new UnityEvent();
 
     float magmaSpawnTimeElapsed;
 
@@ -126,6 +133,7 @@ public class GameManager : MonoBehaviour
         OnGroundHitSound.AddListener(groundHitSoundPool.SpawnObject);
         OnShakeSound.AddListener(shakeSoundPool.SpawnObject);
         OnGroundHit.AddListener(DoDamage);
+        OnHitParticle.AddListener(meteorHitParticlePool.SpawnObject);
     }
 
     private void Start()
@@ -176,7 +184,7 @@ public class GameManager : MonoBehaviour
     private void SpawnMeteorRandom()
     {
         int count = meteorSpawnsRandom.Random();
-        for(int i = 0; i < count; i++)
+        for (int i = 0; i < count; i++)
         {
             SpawnMeteor();
         }

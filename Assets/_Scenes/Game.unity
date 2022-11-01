@@ -153,7 +153,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 792372455}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &169518321
 MonoBehaviour:
@@ -198,7 +198,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 792372455}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &241819949
 MonoBehaviour:
@@ -243,7 +243,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 792372455}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &306650760
 MonoBehaviour:
@@ -532,7 +532,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 792372455}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &580003240
 MonoBehaviour:
@@ -726,7 +726,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 792372455}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &626456848
 MonoBehaviour:
@@ -972,7 +972,7 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 10
+      time: 7
       value: 1
       inSlope: 0
       outSlope: 0
@@ -983,8 +983,8 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 20
       value: 2
-      inSlope: 0.24982588
-      outSlope: 0.24982588
+      inSlope: 0.23828742
+      outSlope: 0.23828742
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
@@ -1011,7 +1011,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   magmaPool: {fileID: 907003164}
-  weights: {fileID: 11400000, guid: 0a93c1c365f93634b979a782c5a6d0df, type: 2}
+  weights: {fileID: 11400000, guid: ed2713151bfaf1649a7f5eccf8bbb219, type: 2}
 --- !u!1 &707086656
 GameObject:
   m_ObjectHideFlags: 0
@@ -1042,7 +1042,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 792372455}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &707086658
 MonoBehaviour:
@@ -1542,6 +1542,7 @@ Transform:
   - {fileID: 462106231}
   - {fileID: 732709662}
   - {fileID: 1409892239}
+  - {fileID: 1091939504}
   - {fileID: 169518320}
   - {fileID: 241819948}
   - {fileID: 707086657}
@@ -2070,7 +2071,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 792372455}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1066868994
 MonoBehaviour:
@@ -2085,6 +2086,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 5482884282008055078, guid: 2bc7f3c3b153cc64daca2bc68afd25da, type: 3}
+--- !u!1 &1091939503
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1091939504}
+  - component: {fileID: 1091939505}
+  m_Layer: 0
+  m_Name: MeteorHitPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1091939504
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091939503}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 792372455}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1091939505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091939503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46125265be5d0bb428e42a329b14cd8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 3345083741687393127, guid: c5afc75d1983c3b4984f22f7ba5e634e, type: 3}
 --- !u!1 &1103885798
 GameObject:
   m_ObjectHideFlags: 0
@@ -2323,6 +2369,7 @@ MonoBehaviour:
   giantMeteorPool: {fileID: 626456848}
   meteorDeathPool: {fileID: 1409892240}
   meteorDeathPoolLarge: {fileID: 169518321}
+  meteorHitParticlePool: {fileID: 1091939505}
   groundPool: {fileID: 1721173977}
   shakeSoundPool: {fileID: 707086658}
   hitSoundPool: {fileID: 580003240}
@@ -2333,7 +2380,7 @@ MonoBehaviour:
   magmaSpawnSecondsRange: {x: 10, y: 20}
   magmaSpawnCount: {x: 2, y: 6}
   meteorSpawnsRandom: {x: 3, y: 6}
-  magmaSpawnsRandom: {x: 5, y: 9}
+  magmaSpawnsRandom: {x: 5, y: 11}
   OnMagmaSpawn:
     m_PersistentCalls:
       m_Calls: []
@@ -2388,10 +2435,16 @@ MonoBehaviour:
   OnInstantDie:
     m_PersistentCalls:
       m_Calls: []
+  OnHitParticle:
+    m_PersistentCalls:
+      m_Calls: []
   OnLifeRemaining:
     m_PersistentCalls:
       m_Calls: []
   OnAnamolyChosen:
+    m_PersistentCalls:
+      m_Calls: []
+  OnGroundSpawned:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &1389559163
@@ -2712,7 +2765,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textBox: {fileID: 1446298313}
   pool: {fileID: 907003164}
-  low: 10
+  low: 7
   medium: 20
 --- !u!1 &1510090399
 GameObject:
@@ -3018,6 +3071,7 @@ GameObject:
   - component: {fileID: 1804211224}
   - component: {fileID: 1804211226}
   - component: {fileID: 1804211223}
+  - component: {fileID: 1804211227}
   - component: {fileID: 1804211222}
   - component: {fileID: 1804211221}
   - component: {fileID: 1804211225}
@@ -3114,6 +3168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  speedMultiplier: 1.5
   bounds: {x: 50, y: -50, z: -2.45, w: -40}
   body: {fileID: 1804211221}
 --- !u!4 &1804211224
@@ -3159,6 +3214,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a19daf7eea31d04e93f0d7478203515, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1804211227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1804211220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 745f4c05a9fc4e74fa78ae87a2e578e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  secondsToSlow: 0.25
+  player: {fileID: 1804211226}
+  movement: {fileID: 1804211223}
 --- !u!1 &2001599531
 GameObject:
   m_ObjectHideFlags: 0

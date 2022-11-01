@@ -10,6 +10,18 @@ public class Orphanage : MonoBehaviour
     [SerializeField]
     Camera orphanCamera;
 
+    public Camera CurrentCamera
+    {
+        get
+        {
+            if (playerCamera.enabled)
+            {
+                return playerCamera;
+            }
+            return orphanCamera;
+        }
+    }
+
     private void Start()
     {
         SetCameras(true);

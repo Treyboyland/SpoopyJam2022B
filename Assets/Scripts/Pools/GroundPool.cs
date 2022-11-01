@@ -22,6 +22,7 @@ public class GroundPool : MonobehaviourPool<GroundTrigger>
         var ground = GetObject();
         ground.transform.position = player.transform.position;
         ground.gameObject.SetActive(true);
+        GameManager.Manager.OnGroundSpawned.Invoke();
     }
 
     public void ResetAll()

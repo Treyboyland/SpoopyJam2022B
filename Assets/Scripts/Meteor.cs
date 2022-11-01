@@ -14,17 +14,23 @@ public class Meteor : MonoBehaviour
 
     int currentHealth;
 
+    static Orphanage orphanage;
+
     private void OnEnable()
     {
         currentHealth = maxHealthRange.Random();
+        if (orphanage == null)
+        {
+            orphanage = GameObject.FindObjectOfType<Orphanage>();
+        }
     }
 
     private void OnMouseDown()
     {
         currentHealth--;
-        if(currentHealth <= 0)
+        if (currentHealth <= 0)
         {
-            if(instaKill)
+            if (instaKill)
             {
                 GameManager.Manager.OnMeteorDestroyLarge.Invoke(transform.position);
             }
@@ -38,6 +44,12 @@ public class Meteor : MonoBehaviour
         else
         {
             GameManager.Manager.OnHitSound.Invoke();
+            if (orphanage != null)
+            {
+                var point = orphanage.CurrentCamera.ScreenToWorldPoint(Input.mousePosition);
+                point.z = 10;
+                GameManager.Manager.OnHitParticle.Invoke(point);
+            }
         }
     }
 }

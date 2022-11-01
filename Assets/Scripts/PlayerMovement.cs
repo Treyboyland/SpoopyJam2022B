@@ -8,10 +8,15 @@ public class PlayerMovement : MonoBehaviour
     float speed;
 
     [SerializeField]
+    float speedMultiplier;
+
+    [SerializeField]
     Vector4 bounds;
 
     [SerializeField]
     Rigidbody2D body;
+
+    public bool UseSpeedMultiplier { get; set; } = false;
 
     // Start is called before the first frame update
     void Start()
@@ -54,23 +59,10 @@ public class PlayerMovement : MonoBehaviour
             movementVector.x = 0;
         }
 
-        //if (transform.position.x > bounds.x)
-        //{
-        //    pos.x = bounds.x;
-        //}
-        //else if (transform.position.x < bounds.y)
-        //{
-        //    pos.x = bounds.y;
-        //}
-
-        //if (transform.position.y > bounds.z)
-        //{
-        //    pos.y = bounds.z;
-        //}
-        //else if (transform.position.y < bounds.w)
-        //{
-        //    pos.y = bounds.w;
-        //}
+        if(UseSpeedMultiplier)
+        {
+            movementVector *= speedMultiplier;
+        }
 
         body.velocity = movementVector;
         transform.position = pos;
